@@ -19,14 +19,14 @@ namespace InfoTools.Client
         }
     }
 
-    class Client
+    class Cli
     {
-        private string host = "http://localhost:5000";
+        readonly string host = "http://localhost:5000";
         
         public HttpClient client = new HttpClient();
         public User user = null;
 
-        public Client() { }
+        public Cli() { }
 
         private async Task<ParseRequestResult> ParseRequest(HttpResponseMessage res)
         {
@@ -74,7 +74,7 @@ namespace InfoTools.Client
             ParseRequestResult Res = await this.PostRequest("/api/v1/oauth/password", new object());
             if(Res.Sucess == false) return null;
             
-            this.client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Res.Content.token);
+            this.client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Convert.ToString(Res.Content.token));
 
             dynamic UserData = (await this.GetRequest("/api/v1/oauth/@me")).Content;
             if (UserData != null)
