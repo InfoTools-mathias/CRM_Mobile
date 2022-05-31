@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InfoTools.Pages.InfoMeetingPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <DatePicker x:Name="entry_date" Margin="20,5" />
+            <TimePicker x:Name="entry_time" Margin="20,5" />
+            <Entry x:Name="entry_zip" Placeholder="Code postal" Margin="20,5" />
+            <Entry x:Name="entry_adress" Placeholder="Adresse" Margin="20,5" />
+            <Button x:Name="edit_submit" Text="Modifier" BackgroundColor="#097fe6" Clicked="edit_submit_Clicked" />
+            <Button x:Name="delete_submit" Text="Supprimer" BackgroundColor="#ab3838" Clicked="delete_submit_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

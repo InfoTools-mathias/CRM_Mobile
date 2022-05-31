@@ -6,19 +6,17 @@ namespace InfoTools.Models
 {
     class Meeting
     {
-        public string Id { get; set; }
-        public DateTime Date { get; set; }
-        public string Zip { get; set; }
-        public string Adress { get; set; }
-        public List<User> Users { get; set; }
+        public string id { get; set; }
+        public string date { get; set; }
+        public string zip { get; set; }
+        public string adress { get; set; }
 
-        public Meeting(string id, DateTime date, string zip, string adress, List<User> users)
+        public Meeting(string id, string date, string zip, string adress)
         {
-            Id = id;
-            Date = date;
-            Zip = zip;
-            Adress = adress;
-            Users = users;
+            this.id = id;
+            this.date = date;
+            this.zip = zip;
+            this.adress = adress;
         }
     }
 }

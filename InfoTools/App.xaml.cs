@@ -13,7 +13,7 @@ namespace InfoTools
 
         protected override void OnStart()
         {
-            MainPage = new LoginPage();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnSleep()

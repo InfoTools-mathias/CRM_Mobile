@@ -6,21 +6,39 @@ namespace InfoTools.Models
 {
     class User
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Email { get; set; }
-        public int Type { get; set; }
-        public string Password { get; set; }
+        public string id { get; set; }
+        public string name { get; set; }
+        public string surname { get; set; }
+        public string mail { get; set; }
+        public int type { get; set; }
 
-        public User(string id, string name, string surname, string email, int type, string password)
+        public User(string id, string name, string surname, string mail, int type)
         {
-            Id = id;
-            Name = name;
-            Surname = surname;
-            Email = email;
-            Type = type;
-            Password = password;
+            this.id = id;
+            this.name = name;
+            this.surname = surname;
+            this.mail = mail;
+            this.type = type;
+        }
+
+        public string GetUser()
+        {
+            return this.surname + " " + this.name;
+        }
+
+        public string GetUserType()
+        {
+            switch (this.type)
+            {
+                case 0: 
+                    return "Administrateur";
+                case 1: 
+                    return "Commercial";
+                case 2: 
+                    return "Client";
+                default: 
+                    return "Prospect";
+            }
         }
     }
 }

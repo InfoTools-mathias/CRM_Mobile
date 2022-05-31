@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InfoTools.Pages.MeetingCreatePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <DatePicker x:Name="entry_date" Margin="20,5" />
+            <TimePicker x:Name="entry_time" Margin="20,5" />
+            <Entry x:Name="entry_zip" Placeholder="Code Postal" Margin="20,5" />
+            <Entry x:Name="entry_adress" Placeholder="Adresse" Margin="20,5" />
+            <Button x:Name="create_submit" Text="Créer" BackgroundColor="#379e3e" Clicked="create_submit_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
